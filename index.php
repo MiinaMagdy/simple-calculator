@@ -21,7 +21,12 @@
             }
         }
         else {
-            $ans = "Error please use numeric digits only";
+            if ($num1 == null || $num2 == null) {
+                $ans = "Please put some number";
+            }
+            else {
+                $ans = "Error please use numeric digits only";
+            }
         }
     }
 ?>
@@ -42,7 +47,7 @@
         height: 150px;
         margin: 0 auto;
         border: 3px solid black;
-        box-shadow: 0px 0px 30px;
+        box-shadow: 0px 0px 10px rgb(105, 105, 105);
     }
     .padd{
         padding: 10px;
@@ -82,7 +87,7 @@
             <th class="padd" colspan="4"><p>Result</p></th>
         </tr>
         <tr>
-            <th class="padd" colspan="4"><input readonly class="res" type="text" value="<?= $ans ?? null ?>"></th>
+            <th class="padd" colspan="4"><p><?= $ans ?? null ?></p></th>
         </tr>
     </table>
 </form>
